@@ -1,0 +1,183 @@
+---
+author: Kostiantyn Dreval
+title: Staff Scientist I
+pdf-engine: latexmk
+tagline: |
+  I specialize in machine learning and data analysis to uncover patterns within large datasets invisible to human eye
+format:
+  sidebar-cv-pdf: default
+cvimage:
+  file: workflow.png
+  trim:
+    left: 100
+    bottom: 10
+    right: 100
+    top: 300
+cvfooter:
+  left: "https://github.com/Kdreval"
+  right: "https://github.com/Kdreval"
+color:
+  main: "a3b18a"
+  accent: "333333"
+  bgdark: "344e41"
+  bglight: "344e41"
+  titletext: FFFFFF
+  maintext: "222222"
+  star: "344e41"
+cvfont: gillius #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvmeta:
+  - name: Who?
+    items:
+      - icon: github-square
+        text: "My GiHub: Kdreval"
+        href: "https://github.com/Kdreval"
+        nowrap: true
+      - icon: atlas
+        text: "My Publications"
+        href: https://scholar.google.com/citations?user=5noD2aEAAAAJ&hl=en
+        nowrap: true
+      - icon: linkedin
+        text: "My LinkedIn"
+        href: https://www.linkedin.com/in/kostiantyn-dreval-05718bba/
+        nowrap: true
+  - name: Where?
+    items:
+      - icon: canadian-maple-leaf #from fontawesome5
+        text: Port Coquitlam, BC, Canada
+      - mail: k.dreval@gmail.com
+  - name: What?
+    items:
+      - icon: r-project
+        text:
+        stars: 5
+        nowrap: true
+      - icon: python
+        text:
+        stars: 5
+      - icon: code
+        text: perl
+        stars: 4
+      - icon: css3-alt
+        text: css
+        stars: 3
+      - icon: database
+        text: SQL
+        stars: 3
+      - icon: brain
+        text: Tensorflow/scikit-learn
+        stars: 4
+      - icon: shapes
+        text: pandas/numpy
+        stars: 4
+      - icon: table
+        text: polars
+        stars: 3
+      - icon: github
+        text: Git
+        stars: 5
+      - icon: server
+        text: Linux/bash
+        stars: 5
+      - icon: random
+        text: Conda/Mamba
+        stars: 5
+      - icon: project-diagram
+        text: Snakemake
+        stars: 5
+  - name: Why?
+    items:
+      - icon: keyboard
+        text: Software Engineering
+        nowrap: true
+      - icon: chart-bar
+        text: Data Science
+        nowrap: true
+      - icon: infinity
+        text: Large datasets
+        nowrap: true
+      - icon: lightbulb
+        text: Machine learning
+        nowrap: true
+      - icon: handshake
+        text: Data management
+        nowrap: true
+      - icon: code-branch
+        text: Version control
+        nowrap: true
+      - icon: database
+        text: Databases
+        nowrap: true
+      - icon: sliders-h
+        text: Reproducibility
+        nowrap: true
+  - name: How?
+    items:
+      - icon: code
+        text: VS Code
+        nowrap: true
+      - icon: git-alt
+        text: GitHub
+      - icon: code
+        text: Terminal
+        nowrap: true
+      - icon: code
+        text: Quarto
+        nowrap: true
+
+execute:
+  echo: false
+keep-tex: false
+---
+
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, details) {
+
+    command_start <- "\\cvevent"
+
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}",
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}")
+
+    tbl[[details]] <- sapply(tbl[[details]], function(x) paste0(x, collapse = ", "))
+    res <- paste0(res, "{",tbl[[details]],"}")
+    cat(res, sep = "\n")
+}
+```
+
+# Summary
+
+Clinical oncogenomics intersecting Data Science, Software Engineering, and Bioinformatics
+
+# Experience
+
+
+```{r}
+#| label: experience
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details, ~tasks,
+    "Staff Scientist I @ BC Cancer", "Vancouver, BC", "09/2023 - Present", "Data Analysis", c("Design and deploy advanced machine learning models into production", "Conduct software engineering to analyze complex high-dimensional datasets", "Manage complete data science workflow from data engineering to model deployment", "Oversee the integration of new datasets into existing pipelines and databases", "Implement bioinformatics software and scripts with workflow management systems", "Review project specifications and design solutions exceeding performance expectations"),
+    "Research Associate @ BC Cancer", "Vancouver, BC", "09/2021 - 09/2023", "Software Engineering and Data Analysis", c("Engineer software solutions for the analysis and front-end access to large datasets", "Develop and optimize machine learning models within big data pipelines", "Design SQL databases and R-based software for efficient data retrieval", "Design reproducible computational workflows for genomic analyses", "Conduct code reviews and managed version control using GitHub", "Provide training and mentorship to new recruits and junior team members"),
+    "PostDoctoral Fellow @ Simon Fraser University", "Burnaby, BC", "09/2020 - 09/2021", "Software Engineering and Computational Biology", c("Develop software solutions for reproducible bioinformatics workflows", "Design and implement computational analyses for large-scale datasets", "Execute data engineering tasks to collect and analyze extensive genomic datasets", "Analyze existing software to update codebases and improve functionality"),
+    "PostDoctoral Research Fellow @ University of New Mexico", "Albuquerque, NM", "09/2017 - 06/2020", "Data Analysis", c("Conduct comprehensive analyses of extensive public datasets of multiomics data", "Design and implement experimental protocols in the wet lab", "Develop software for the analysis of chromatin immunoprecipitation assays"),
+    "ORISE PostDoctoral Fellow @ U.S. Food and Drug Administration", "Little Rock, AR", "06/2015 - 08/2017", "Data Analysis", c("Conduct in-depth analyses of gene expression and DNA methylation datasets", "Designin and executing experimental protocols in the wet lab")
+
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", details = "tasks")
+```
+
+# Education
+
+```{r }
+#| label: education
+#| output: asis
+tibble::tribble(
+    ~degree, ~uni, ~loc, ~dates, ~details,
+    "Certificate in Regulatory Science", "Little Rock, USA", "Little Rock, AR", "8/2016 - 06/2017", c(""),
+    "PhD in Biotechnology", "Ukraine", "Donetsk, Ukraine", "11/2009 - 05/2012", c("")
+) |>
+    cvevents(when = "dates", what = "degree", where = "uni", details = "details")
+```
