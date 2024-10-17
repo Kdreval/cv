@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729141951.5513 "cv.tex" "cv.pdf" "cv" 1729141952.46105 0
+["pdflatex"] 1729142106.53003 "cv.tex" "cv.pdf" "cv" 1729142107.41282 0
   "/home/kodreval/.TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc" 1727203656.64895 2920 d63721872b8c77041b88e51b8f7c291d ""
   "/home/kodreval/.TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands1.enc" 1727203656.64895 2608 3139db8e1f9371a4f87c0715d17fa217 ""
   "/home/kodreval/.TinyTeX/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free0.enc" 1727203656.64895 3083 a707712f77b073b3833e4b1334a30e99 ""
@@ -191,9 +191,9 @@
   "/home/kodreval/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1727207218 504563 2df4efc87723cbefe26867475e4d2157 ""
   "/home/kodreval/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1727207185 1959045 473e0d33cfa9794701b4c1c8a22a5722 ""
   "/home/kodreval/.TinyTeX/texmf.cnf" 1727203661.281 637 edd806fb06a89761a6034e1968af9017 ""
-  "cv.aux" 1729141952.32864 243 62390a54164e6ecb0ca4c3a3fd96b4ad "pdflatex"
-  "cv.out" 1729141952.15264 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv.tex" 1729141950.40861 17609 279fc1a64d96ef459497f32bc6f5a531 ""
+  "cv.aux" 1729142107.271 243 62390a54164e6ecb0ca4c3a3fd96b4ad "pdflatex"
+  "cv.out" 1729142107.131 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv.tex" 1729142105.38698 17609 279fc1a64d96ef459497f32bc6f5a531 ""
   "workflow.png" 1728942254.33135 1695067 09e2f168204d10227f1c917eaf5f5cba ""
   (generated)
   "cv.aux"
